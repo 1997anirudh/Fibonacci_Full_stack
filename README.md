@@ -1,4 +1,4 @@
-# Fibonacci_Full_stack
+# Fibonacci Full-stack 
 Full stack project built for CZB take home assessment
 The frontend has 2 pages namely
 1. home.html - we have a label, textbox and a submit button encompassed inside a
