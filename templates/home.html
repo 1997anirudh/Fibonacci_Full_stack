@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Home Page</title>
-    <link rel="stylesheet" type="text/css" href="/Users/anirudhsrinivasan/Github/Fibonacci_Full_stack/home.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
 </head>
 <body>
     <h1>Page 1</h1>
@@ -12,5 +12,8 @@
         <input type="number" id="number_input" name="number_input" placeholder="Enter a number">
         <button type="submit">Submit</button>
     </form>
+    {% if square %}
+        <p>Square: {{ square }}</p>
+    {% endif %}
 </body>
 </html>
