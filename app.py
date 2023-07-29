@@ -10,14 +10,6 @@ class FibDB(db.Model):
     number = db.Column(db.Integer,unique=True)
     fibonacci = db.Column(db.String)
 
-# def calculate_fibonacci(n):
-#     if n <= 0:
-#         return 0
-#     elif n == 1:
-#         return 1
-#     else:
-#         return calculate_fibonacci(n-1) + calculate_fibonacci(n-2)
-
 def calculate_fibonacci_series(n):
     fibonacci_series = [0, 1]
     while len(fibonacci_series) < n:
@@ -30,6 +22,8 @@ def calculate_fibonacci_series(n):
 def home():
     if request.method == 'POST':
         number = int(request.form['number_input'])
+        if number <= 0:
+            return render_template('home.html')
         fibdb = FibDB.query.filter_by(number=number).first()
         if fibdb:
             fibonacci = fibdb.fibonacci
