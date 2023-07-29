@@ -1,3 +1,6 @@
+<!-- This is the final landing page of the application
+that displays the fibonacci Series -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +9,14 @@
 </head>
 <body>
     <h1>Final Page</h1>
-    <p>Number: {{ res.number }}</p>
-    <p>Fibonacci Series: {{ res.fibonacci }}</p>
+    <p><b>Number: {{ res.number }}</b></p>
+    <p><b>Fibonacci Series: {{ res.fibonacci }}</b></p>
 </body>
+<footer>
+    <p>Copyright &copy<span id="current-year"></span> Anirudh Srinivasan's Website. All rights reserved.</p>
+</footer>
+<script>
+        const currentYear = new Date().getFullYear();
+        document.getElementById("current-year").textContent = currentYear;
+</script>
 </html>
